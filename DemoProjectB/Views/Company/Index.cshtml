@@ -19,6 +19,7 @@
                 <td>Last Name</td>
                 <td>Position</td>
                 <td>Salary</td>
+                <td>Joined on</td>
             </tr>
         </thead>
         <tbody>
@@ -28,7 +29,8 @@
                     <td>@employee.FirstName</td>
                     <td>@employee.LastName</td>
                     <td>@employee.Position</td>
-                    <td>@employee.Salary</td>
+                    <td>@employee.Salary EUR</td>
+                    <td>@employee.JoinedOn.ToShortDateString()</td>
                 </tr>
             }
         </tbody>

@@ -20,14 +20,16 @@ namespace DemoProjectB.Controllers
                         FirstName = "Adriatik",
                         LastName = "Ademi",
                         Position = "Head of dev",
-                        Salary = 100
+                        Salary = 100,
+                        JoinedOn = DateTime.Now.AddYears(-1)
                     },
                     new EmployeeModel()
                     {
                         FirstName = "Emerjon",
                         LastName = "Hasani",
                         Position = "Senior dev",
-                        Salary = 300000
+                        Salary = 300000,
+                        JoinedOn = DateTime.Now.AddMonths(-18)
                     },
                 },
 
