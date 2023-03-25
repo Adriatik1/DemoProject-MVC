@@ -1,0 +1,64 @@
+﻿@using DemoProjectB.Models.Company
+@model CompanyModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center mt-5">
+    <h2>Company Name: @Model.Name</h2>
+    <span>Company Address: @Model.Address</span>
+</div>
+
+<div class="text-center mt-5">
+    <h3>Employees</h3>
+    <table class="table table-hover mt-5">
+        <thead>
+            <tr class="table-dark">
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Position</td>
+                <td>Salary</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model.Employees!)
+            {
+                <tr>
+                    <td>@employee.FirstName</td>
+                    <td>@employee.LastName</td>
+                    <td>@employee.Position</td>
+                    <td>@employee.Salary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Departments</h3>
+    <table class="table table-hover mt-5">
+        <thead>
+            <tr class="table-dark">
+                <td>Name</td>
+                <td>Head of department</td>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var department in Model.Department!)
+            {
+                <tr>
+                    <td>@department.Name</td>
+                    <td>@department.HeadOfDepartment</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<style scoped>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+</style>

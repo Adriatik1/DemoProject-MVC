@@ -1,0 +1,26 @@
+﻿@model UserModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    Pershendetje @Model.FirstName @Model.LastName
+    <br />
+
+    @if (Model.Age >= 18)
+    {
+        <span> Mosha me e madhe se 18 </span>
+    }
+    else
+    {
+        <span> Mosha me e vogel se 18 </span>
+    }
+</div>
+
+
+<div class="text-center mt-5">
+    <span>
+        @Model.Company!.Name - @Model.Company!.Address
+    </span>
+</div>
